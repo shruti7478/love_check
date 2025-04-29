@@ -12,9 +12,6 @@
     <title>DO you love me?</title>
   </head>
   <body>
-    <!-- for more code, visit my tiktok account -->
-    <!-- tiktok "meowish" -->
-
     <div class="question-container container">
       <img
         src="https://media.tenor.com/4O9k32AJaF4AAAAd/tkthao219-bubududu.gif"
@@ -29,10 +26,12 @@
     </div>
 
     <div class="result-container container">
-      <!-- Video element to be shown after the "Yes" button is clicked -->
+      <!-- Test with local video or GitHub video URL -->
       <video class="video-result" controls style="max-width: 100%; height: auto; display: none;">
-        <!-- Replace with your GitHub raw URL -->
-        <source src="https://raw.githubusercontent.com/username/repository/branch/cute_love_gif.mp4" type="video/mp4" />
+        <!-- Use a local video or raw GitHub URL -->
+        <source src="cute_love_gif.mp4" type="video/mp4" />
+        <!-- Or replace with GitHub URL if needed -->
+        <!-- <source src="https://raw.githubusercontent.com/username/repository/branch/videos/cute_love_gif.mp4" type="video/mp4" /> -->
         Your browser does not support the video tag.
       </video>
       <h2>I knew it😍!</h2>
@@ -51,7 +50,7 @@
     <script>
       const questionContainer = document.querySelector(".question-container");
       const resultContainer = document.querySelector(".result-container");
-      const videoResult = document.querySelector(".video-result"); // Ensure this targets the video
+      const videoResult = document.querySelector(".video-result");  // Ensure this targets the video
       const heartLoader = document.querySelector(".cssload-main");
       const yesBtn = document.querySelector(".js-yes-btn");
       const noBtn = document.querySelector(".js-no-btn");
@@ -59,7 +58,7 @@
       // Change the position of the no button
       noBtn.addEventListener("mouseover", () => {
         const newX = Math.floor(Math.random() * questionContainer.offsetWidth);
-        const newY = Math.floor(Math.random() * questionContainer.offsetHeight); // Corrected this line to use offsetHeight
+        const newY = Math.floor(Math.random() * questionContainer.offsetHeight);
         noBtn.style.left = `${newX}px`;
         noBtn.style.top = `${newY}px`;
       });
@@ -80,9 +79,4 @@
     </script>
   </body>
 </html>
-
-
-    <div class="cssload-main">
-      <div class="cssload-heart">
-
 
