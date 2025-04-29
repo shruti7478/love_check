@@ -86,9 +86,13 @@ body {
   transition: 0.2s;
 }
 .gif-result {
+  width: 100%;
+  max-width: 500px;
   border-radius: 10px;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
+  display: block;
 }
+
 .result-container h2 {
   font-size: 3.2rem;
   text-align: center;
