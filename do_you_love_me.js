@@ -1,6 +1,6 @@
 const questionContainer = document.querySelector(".question-container");
 const resultContainer = document.querySelector(".result-container");
-const gifResult = document.querySelector(".gif-result");
+const videoResult = document.querySelector(".video-result");  // Update to target the video instead of the GIF
 const heartLoader = document.querySelector(".cssload-main");
 const yesBtn = document.querySelector(".js-yes-btn");
 const noBtn = document.querySelector(".js-no-btn");
@@ -22,7 +22,7 @@ yesBtn.addEventListener("click", () => {
   setTimeout(() => {
     heartLoader.style.display = "none"; // Hide the loader
     resultContainer.style.display = "block"; // Show the result container
-    gifResult.style.display = "block"; // Ensure the GIF is visible
+    videoResult.style.display = "block"; // Ensure the video is visible
+    videoResult.play(); // Start playing the video automatically
   }, 3000);
 });
-
