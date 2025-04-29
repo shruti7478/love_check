@@ -31,37 +31,14 @@
     <div class="result-container container">
       <!-- Replace GIF with Video -->
       <video class="video-result" controls style="max-width: 100%; height: auto; display: none;">
-        <source src="videos/your_video.mp4" type="video/mp4" />
-        <source src="videos/your_video.ogg" type="video/ogg" />
-       
+        <!-- Replace with your GitHub raw URL -->
+        <source src="https://raw.githubusercontent.com/username/repository/branch/videos/cute_love_gif.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
       <h2>I knew it😍!</h2>
     </div>
 
     <div class="cssload-main">
       <div class="cssload-heart">
-        <span class="cssload-heartL"></span>
-        <span class="cssload-heartR"></span>
-        <span class="cssload-square"></span>
-      </div>
-      <div class="cssload-shadow"></div>
-    </div>
 
-    <script src="do_you_love_me.js"></script>
-    <script>
-      // Handling the "Yes" button click to show video
-      document.querySelector('.js-yes-btn').addEventListener('click', function() {
-        // Hide the buttons
-        document.querySelector('.button-container').style.display = 'none';
-        
-        // Show the video
-        const video = document.querySelector('.video-result');
-        video.style.display = 'block';
-        
-        // Play the video
-        video.play();
-      });
-    </script>
-  </body>
-</html>
 
