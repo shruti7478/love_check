@@ -1,6 +1,7 @@
+
 const questionContainer = document.querySelector(".question-container");
 const resultContainer = document.querySelector(".result-container");
-const videoResult = document.querySelector(".video-result");  // Update to target the video instead of the GIF
+const gifResult = document.querySelector(".gif-result");
 const heartLoader = document.querySelector(".cssload-main");
 const yesBtn = document.querySelector(".js-yes-btn");
 const noBtn = document.querySelector(".js-no-btn");
@@ -9,8 +10,8 @@ const noBtn = document.querySelector(".js-no-btn");
 noBtn.addEventListener("mouseover", () => {
   const newX = Math.floor(Math.random() * questionContainer.offsetWidth);
   const newY = Math.floor(Math.random() * questionContainer.offsetHeight); // Corrected this line to use offsetHeight
-  noBtn.style.left = `${newX}px`;
-  noBtn.style.top = `${newY}px`;
+  noBtn.style.left = ${newX}px;
+  noBtn.style.top = ${newY}px;
 });
 
 // Yes button functionality
@@ -22,7 +23,6 @@ yesBtn.addEventListener("click", () => {
   setTimeout(() => {
     heartLoader.style.display = "none"; // Hide the loader
     resultContainer.style.display = "block"; // Show the result container
-    videoResult.style.display = "block"; // Ensure the video is visible
-    videoResult.play(); // Start playing the video automatically
+    gifResult.style.display = "block"; // Ensure the GIF is visible
   }, 3000);
 });
