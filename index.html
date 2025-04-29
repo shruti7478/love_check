@@ -12,6 +12,9 @@
     <title>DO you love me?</title>
   </head>
   <body>
+    <!-- for more code, visit my tiktok account -->
+    <!-- tiktok "meowish" -->
+
     <div class="question-container container">
       <img
         src="https://media.tenor.com/4O9k32AJaF4AAAAd/tkthao219-bubududu.gif"
@@ -26,13 +29,11 @@
     </div>
 
     <div class="result-container container">
-      <!-- Test with local video or GitHub video URL -->
+      <!-- Replace GIF with Video -->
       <video class="video-result" controls style="max-width: 100%; height: auto; display: none;">
-        <!-- Use a local video or raw GitHub URL -->
-        <source src="cute_love_gif.mp4" type="video/mp4" />
-        <!-- Or replace with GitHub URL if needed -->
-        <!-- <source src="https://raw.githubusercontent.com/username/repository/branch/videos/cute_love_gif.mp4" type="video/mp4" /> -->
-        
+        <source src="videos/your_video.mp4" type="video/mp4" />
+        <source src="videos/your_video.ogg" type="video/ogg" />
+        Your browser does not support the video tag.
       </video>
       <h2>I knew it😍!</h2>
     </div>
@@ -48,35 +49,18 @@
 
     <script src="do_you_love_me.js"></script>
     <script>
-      const questionContainer = document.querySelector(".question-container");
-      const resultContainer = document.querySelector(".result-container");
-      const videoResult = document.querySelector(".video-result");  // Ensure this targets the video
-      const heartLoader = document.querySelector(".cssload-main");
-      const yesBtn = document.querySelector(".js-yes-btn");
-      const noBtn = document.querySelector(".js-no-btn");
-
-      // Change the position of the no button
-      noBtn.addEventListener("mouseover", () => {
-        const newX = Math.floor(Math.random() * questionContainer.offsetWidth);
-        const newY = Math.floor(Math.random() * questionContainer.offsetHeight);
-        noBtn.style.left = `${newX}px`;
-        noBtn.style.top = `${newY}px`;
-      });
-
-      // Yes button functionality
-      yesBtn.addEventListener("click", () => {
-        questionContainer.style.display = "none"; // Hide the question container
-        heartLoader.style.display = "block"; // Show the heart loader
-
-        // After 3 seconds, hide the loader and show the result container
-        setTimeout(() => {
-          heartLoader.style.display = "none"; // Hide the loader
-          resultContainer.style.display = "block"; // Show the result container
-          videoResult.style.display = "block"; // Ensure the video is visible
-          videoResult.play(); // Start playing the video automatically
-        }, 3000);
+      // Handling the "Yes" button click to show video
+      document.querySelector('.js-yes-btn').addEventListener('click', function() {
+        // Hide the buttons
+        document.querySelector('.button-container').style.display = 'none';
+        
+        // Show the video
+        const video = document.querySelector('.video-result');
+        video.style.display = 'block';
+        
+        // Play the video
+        video.play();
       });
     </script>
   </body>
 </html>
-
