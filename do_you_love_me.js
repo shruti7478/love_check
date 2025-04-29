@@ -23,6 +23,6 @@ yesBtn.addEventListener("click", () => {
   const timeoutId = setTimeout(() => {
     heartLoader.style.display = "none";
     resultContainer.style.display = "inherit";
-    gifResult.play();
+    
   }, 3000);
 });
