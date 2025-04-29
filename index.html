@@ -29,7 +29,7 @@
     </div>
 
     <div class="result-container container">
-      <!-- Replace GIF with Video -->
+      <!-- Video element to be shown after the "Yes" button is clicked -->
       <video class="video-result" controls style="max-width: 100%; height: auto; display: none;">
         <!-- Replace with your GitHub raw URL -->
         <source src="https://raw.githubusercontent.com/username/repository/branch/videos/cute_love_gif.mp4" type="video/mp4" />
@@ -37,6 +37,50 @@
       </video>
       <h2>I knew it😍!</h2>
     </div>
+
+    <div class="cssload-main">
+      <div class="cssload-heart">
+        <span class="cssload-heartL"></span>
+        <span class="cssload-heartR"></span>
+        <span class="cssload-square"></span>
+      </div>
+      <div class="cssload-shadow"></div>
+    </div>
+
+    <script src="do_you_love_me.js"></script>
+    <script>
+      const questionContainer = document.querySelector(".question-container");
+      const resultContainer = document.querySelector(".result-container");
+      const videoResult = document.querySelector(".video-result"); // Ensure this targets the video
+      const heartLoader = document.querySelector(".cssload-main");
+      const yesBtn = document.querySelector(".js-yes-btn");
+      const noBtn = document.querySelector(".js-no-btn");
+
+      // Change the position of the no button
+      noBtn.addEventListener("mouseover", () => {
+        const newX = Math.floor(Math.random() * questionContainer.offsetWidth);
+        const newY = Math.floor(Math.random() * questionContainer.offsetHeight); // Corrected this line to use offsetHeight
+        noBtn.style.left = `${newX}px`;
+        noBtn.style.top = `${newY}px`;
+      });
+
+      // Yes button functionality
+      yesBtn.addEventListener("click", () => {
+        questionContainer.style.display = "none"; // Hide the question container
+        heartLoader.style.display = "block"; // Show the heart loader
+
+        // After 3 seconds, hide the loader and show the result container
+        setTimeout(() => {
+          heartLoader.style.display = "none"; // Hide the loader
+          resultContainer.style.display = "block"; // Show the result container
+          videoResult.style.display = "block"; // Ensure the video is visible
+          videoResult.play(); // Start playing the video automatically
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>
+
 
     <div class="cssload-main">
       <div class="cssload-heart">
